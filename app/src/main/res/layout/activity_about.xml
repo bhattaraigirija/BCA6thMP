@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutActivity">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/exampleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This is title."
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/exampleText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This is subtitle."
+            android:textSize="24sp"/>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/exampleText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This is title 1."
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/exampleText21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This is subtitle 1."
+            android:textSize="24sp"/>
+
+    </TableRow>
+
+    <AbsoluteLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="heii theis is absolute layout"
+            android:layout_x="55dp"
+            android:layout_y="55dp"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/exampleText"
+            android:layout_x="105dp"
+            android:text="Click Me"
+            android:layout_y="105dp"/>
+    </AbsoluteLayout>
+
+
+
+</TableLayout>

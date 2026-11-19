@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">BCA6th</string>
+
+    <string-array name="cities">
+        <item>--Select Cities--</item>
+        <item>Kathmandu</item>
+        <item>Lalitpur</item>
+        <item>Pokhara</item>
+        <item>Kanchanpur</item>
+    </string-array>
+
+
+</resources>
