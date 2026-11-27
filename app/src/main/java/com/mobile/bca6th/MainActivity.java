@@ -1,6 +1,7 @@
 package com.mobile.bca6th;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.widget.Button;
@@ -29,13 +30,20 @@ public class MainActivity extends AppCompatActivity {
         btn = findViewById(R.id.btnRegister);
         editText = findViewById(R.id.edtName);
 
-        btn.setOnClickListener(v -> {
 
-            //show toast message on button click
-            Toast.makeText(MainActivity.this,
-                    "Button Clicked",
-                    Toast.LENGTH_LONG).show();
+
+        btn.setOnClickListener(view -> {
+            Intent i = new Intent(MainActivity.this, DashboardActivity.class);
+            i.putExtra("name", "Girija");
+            i.putExtra("age", 23);
+            i.putExtra("address","Kathmandu");
+            startActivity(i);
+
         });
+
+
+
+
 
         editText.setOnKeyListener((v, keyCode, event) -> {
             if(event.getAction() == KeyEvent.ACTION_DOWN) {
