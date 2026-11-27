@@ -26,11 +26,14 @@ public class DashboardActivity extends AppCompatActivity {
         age = findViewById(R.id.txvAge);
 
         String rsName = getIntent().getStringExtra("name");
-        int rsAge = getIntent().getIntExtra("age", 0);
         String rsAddress = getIntent().getStringExtra("address");
+        String rsPhone = getIntent().getStringExtra("phone");
+        String rsEmail = getIntent().getStringExtra("email");
 
-        name.setText(rsName);
-        address.setText(rsAddress);
-        age.setText(String.valueOf(rsAge));
+        name.setText("Name: "+rsName+
+                "\nPhone: "+rsPhone+
+                "\nAddress: "+rsAddress+
+                "\nEmail: "+rsEmail);
+
     }
 }

@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     Button btn;
-    EditText editText;
+    EditText dname, daddress, dphone, demail;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -28,15 +28,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btn = findViewById(R.id.btnRegister);
-        editText = findViewById(R.id.edtName);
-
-
+        dname = findViewById(R.id.edtName);
+        daddress = findViewById(R.id.edtAddress);
+        dphone = findViewById(R.id.edtPhone);
+        demail = findViewById(R.id.edtEmail);
 
         btn.setOnClickListener(view -> {
+            String name = dname.getText().toString();
+            String address = daddress.getText().toString();
+            String phone = dphone.getText().toString();
+            String email = demail.getText().toString();
+
             Intent i = new Intent(MainActivity.this, DashboardActivity.class);
-            i.putExtra("name", "Girija");
-            i.putExtra("age", 23);
-            i.putExtra("address","Kathmandu");
+            i.putExtra("name", name);
+            i.putExtra("address", address);
+            i.putExtra("phone",phone);
+            i.putExtra("email",email);
             startActivity(i);
 
         });
@@ -45,15 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        editText.setOnKeyListener((v, keyCode, event) -> {
-            if(event.getAction() == KeyEvent.ACTION_DOWN) {
-                String keyName = KeyEvent.keyCodeToString(keyCode);
-               Toast.makeText(MainActivity.this,
-                       "Key Pressed " + keyName,
-                       Toast.LENGTH_LONG).show();
-            }
-            return false;
-        });
+
 
         }
     }
